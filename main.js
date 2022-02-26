@@ -62,15 +62,15 @@ while(choice !== 3) {
 
         for (let count = 0; count < toDoList.length; count++) {
             
-            trueFalse[count] = false;
+            trueFalse[toDoList.length-1] = false;
 
-            if (trueFalse[count] === false) {
+            if (trueFalse[toDoList.length-1] === false) {
 
-                status[count] = "incomplete";
+                status[toDoList.length-1] = "incomplete";
 
-            } else if (trueFalse[count] === true) {
+            } else if (trueFalse[toDoList.length-1] === true) {
 
-                status[count] = "complete";
+                status[toDoList.length-1] = "complete";
 
             }
 
@@ -94,15 +94,15 @@ while(choice !== 3) {
 
             if (trueFalse[count] === false) {
 
-                status[count] = "[incomplete]";
+                status[count] = "incomplete";
 
             } else if (trueFalse[count] === true) {
 
-                status[count] = "[complete]";
+                status[count] = "complete";
 
             }
 
-            console.log(Number(count + 1) + "." + status[count] + toDoList[count]);
+            console.log(Number(count + 1) + "." + "[" + status[count] + "]" + toDoList[count]);
 
         }
     
